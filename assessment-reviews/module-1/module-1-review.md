@@ -30,6 +30,7 @@ To be semantic means that the HTML code is clean and organized, as well as makes
 <a href="http://google.com>Google</a>
 
 5. Write an complete standard HTML document outline (including a DOCTYPE, and `<html>`, `<head>`, and `<body>` tags).
+`
 <!DOCTYPE HTML>
   <html>
     <head>
@@ -40,7 +41,7 @@ To be semantic means that the HTML code is clean and organized, as well as makes
   <body>
   </body>
   </html>
-
+`
 6. Inside of the code for the previous exercise, write the appropriate tag to link to a script file called `main.js`.
 See #5
 7. Inside of the code for the previous exercise, write the appropriate tag to link to a stylesheet file called `main.css`.
