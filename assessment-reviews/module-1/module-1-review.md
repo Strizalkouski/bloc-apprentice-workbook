@@ -10,29 +10,59 @@
 
 ### Questions
 
-1. What is HTML and what is it used for?
+1. What is HTML and what is it used for? -Hypertext Markup Language.  It is used to create webpages featuring different sized headings, paragraphs, web forms, and other objects.  TLDR it is used to create Documents on the Web, as well as define the layout or structure.
+
 2. What is the difference between an ID and a class?
+The ID selector is used once to identify a specific element to be modified.  The class selector typically includes multiple elements and will allow for you to change or format that whole component.  TLDR ID is unique to a single element wheras Class covers many.
+
 3. What does it mean to write "semantic" HTML?
+To be semantic means that the HTML code is clean and organized, as well as makes sense.  This includes things such as Indentations with nesting, as well as using classes and ID's so that you can make more sense of what is going on.
 
 ### Exercises
 
 1. Write a paragraph tag with a class of "highlight" and content "Watch out!".
+<p class=highlight> Watch out! </p>
+
 2. Write an HTML image tag to show an image called `profile-picture.jpg`.
+<img src=profile-picture.jpg alt="Profile Picture" height="50px" width="50px">
+
 3. Write a link tag that links to http://google.com.
+<a href="http://google.com>Google</a>
+
 5. Write an complete standard HTML document outline (including a DOCTYPE, and `<html>`, `<head>`, and `<body>` tags).
+<!DOCTYPE HTML>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <script src="main.js"></script>
+      <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+  <body>
+  </body>
+  </html>
+
 6. Inside of the code for the previous exercise, write the appropriate tag to link to a script file called `main.js`.
+See #5
 7. Inside of the code for the previous exercise, write the appropriate tag to link to a stylesheet file called `main.css`.
+See #5
+
 8. Write a numbered list in HTML and list three of your favorite books.
+<ol>
+  <li>Harry Potter Series</li>
+  <li>Inheritance Series </li>
+  <li>A world of Ice and Fire </li>
+<ol>
+
 9. Fix the indentation of the following HTML sample:
 
   ```html
   <div>
-  <ul>
-  <li>Item 1</li>
-    <li>Item 2</li>
-  <li>Item 3</li>
-    </ul>
-    </div>
+      <ul>
+         <li>Item 1</li>
+         <li>Item 2</li>
+         <li>Item 3</li>
+      </ul>
+  </div>
   ```
 
 ## CSS
@@ -40,20 +70,41 @@
 ### Questions
 
 1. What is CSS and what is it used for?
+CSS stands for Cascading Style Sheets.  CSS is used to change the look and formatting of HTML pages.  This is done using items such as background colors, images, borders, page orientation, etc.  CSS is called Cascading style sheets because declarations made at the top will cascade down throughout the rest of the page for selected items, UNLESS changed further down.
+
 2. What is the CSS box model?
+The box model works as follows (from center working outward):
+  -Content is the core - it is your center
+  -Surrounding the content you have padding.
+  -Surrounding padding you have your border.
+  -Surrounding your border you have your margins.
+
 3. What's the difference between margin and padding?
+Padding creates space between the information inside of the content section and it's border, this can lead to a cleaner look where letters are no longer cut off by bordering for example.  Margin creates space between the border and OTHER content.  This allows the content to look cleaner by creating some space away from other items or the sides of pages.
+
 
 ### Exercises
 
 1. Write a CSS rule to make the text of all `h1` tags red.
-2. Write a CSS rule to make the background color of the link with `class="btn"` blue:
+h1 {
+    text-color:red;
+   }
 
+2. Write a CSS rule to make the background color of the link with `class="btn"` blue:
+btn a
+    {
+    color: blue;
+    }
   ```html
   <a href="#" class="btn">Learn more</a>
   ```
 
 3. Write a CSS rule to give the first paragraph in the following HTML a font size of `20px`, but not the second paragraph.
 
+jumbotron p
+        {
+        font-size:20px;
+        }
   ```html
   <header class="jumbotron">
     <p>Hello, World!</p>
@@ -67,10 +118,27 @@
 ### Questions
 
 1. What is a function? What are they used for?
+
+
 2. What is the difference between `==` and `===`?
+`==` will compare two items and try to make a conversion.  `===` compares two items and is literal, with no conversion so 'm'=='M' is true however 'm' === 'M' is false.
+
 3. What is the difference between global and local scope variables?
+Global scope is for your entirety of your code.  Local scope is contained to within the function it is declared for.  Example:
+
+x=0;
+
+function dogTreat(){
+x=1;
+                   }
+The x=1 is a LOCAL variable.  The x=0 is a global.
+
 4. What is a boolean value?
+boolean logic returns a value of True OR False.
+
 5. What is an array?
+An array is a collection of slots which contain data i.e. Strings, Numbers, Boolean, which can be accessed beginning with slot 0 and going up to as many items as the array contains.
+
 
 ### Exercises
 
