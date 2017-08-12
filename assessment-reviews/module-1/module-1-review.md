@@ -21,13 +21,13 @@ To be semantic means that the HTML code is clean and organized, as well as makes
 ### Exercises
 
 1. Write a paragraph tag with a class of "highlight" and content "Watch out!".
-<p class=highlight> Watch out! </p>
+<p class="highlight"> Watch out! </p>
 
 2. Write an HTML image tag to show an image called `profile-picture.jpg`.
-<img src=profile-picture.jpg alt="Profile Picture" height="50px" width="50px">
+<img src="profile-picture.jpg" alt="Profile Picture" height="50px" width="50px">
 
 3. Write a link tag that links to http://google.com.
-<a href="http://google.com>Google</a>
+<a href="http://google.com">Google</a>
 
 5. Write an complete standard HTML document outline (including a DOCTYPE, and `<html>`, `<head>`, and `<body>` tags).
 
@@ -54,7 +54,7 @@ See #5
   <li>Harry Potter Series</li>
   <li>Inheritance Series </li>
   <li>A world of Ice and Fire </li>
-<ol>
+</ol>
 
 9. Fix the indentation of the following HTML sample:
 
@@ -94,7 +94,7 @@ h1 {
    }
 
 2. Write a CSS rule to make the background color of the link with `class="btn"` blue:
-btn a
+.btn a
     {
     color: blue;
     }
@@ -104,7 +104,7 @@ btn a
 
 3. Write a CSS rule to give the first paragraph in the following HTML a font size of `20px`, but not the second paragraph.
 
-jumbotron p
+.jumbotron p
         {
         font-size:20px;
         }
@@ -124,7 +124,7 @@ jumbotron p
 A function is a section of code that when combined, completes a task.  You can call functions after declared in order to complete a task.
 
 2. What is the difference between `==` and `===`?
-`==` will compare two items and try to make a conversion.  `===` compares two items and is literal, with no conversion so 'm'=='M' is true however 'm' === 'M' is false.
+`==` will compare two items and try to make a conversion of type.  `===` compares two items and is STRICT, with no conversion.
 
 3. What is the difference between global and local scope variables?
 Global scope is for your entirety of your code.  Local scope is contained to within the function it is declared for.  Example:
@@ -152,7 +152,7 @@ An array is a collection of slots which contain data i.e. Strings, Numbers, Bool
 ```
 ```
 2. Write a loop that logs the numbers 1 through 10 to the console.
-for(var i=1;i<11;i++){
+for(var i=1;i<=10;i++){
 console.log(i);
 }
 ```
@@ -166,9 +166,9 @@ if (score >3 && lives>0){
 4. Write a function `sayHello` that takes one argument, a name, and logs "Hello, <name>!" to the console. Then, call the function below the function definition and pass in your name as the argument.
 
 function sayHello(name){
-                       console.log("Hello" + name + "!");
+                       console.log("Hello " + name + "!");
                        {
-sayHello(Mark Strizalkouski);
+sayHello("Mark Strizalkouski");
 ```
 5. What would the following script log to the console?
 
@@ -219,42 +219,33 @@ The output would be "Hello Sarah !" "Goodbye Sarah !"
 
 8. Write a function `findLongestWord()` that takes an array of words and returns the length of the longest one.
 ```
-function findLongestWord(word[]){
-                          var longest == undefined;
-                            for(i=0;i<=word[];i++)
+function findLongestWord(word){
+                          var longest == 0;
+                            for(i=0;i<word.length;i++)
                             {
-                            if word.length > longest)
-                            {
-                            longest== word;
-                            }
-                            else
-                            {
-                            return;
-                            }
-                           
+                            if (word[i].length > longest)
+                              {
+                              longest == word;
+                              }
                             }
 ```
 9. Define a function `sum()` that sums all the numbers in an array of numbers. For example, `sum([1,2,3,4])` should return 10.
 ```
-var numbers=[1,2,3,4];
-function sum ()    {
+
+function sum (numbers)    {
+var sum = 0;
         for(i=0;i<numbers.length;i++)
                   {
-                  numbers+=sum
+                  sum += numbers[i];
+                  
                   }
-        console.log(sum);
+           return sum;
                 }
 ```
 10. Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 ```
 function vowel(a){
-      if(vowel.toLowercase(0).charAt(0)==a || vowel.toLowercase(0).charAt(0)==e || vowel.toLowercase(0).charAt(0)==i ||       vowel.toLowercase(0).charAt(0)==o || vowel.toLowercase(0).charAt(0)==u;)
-                      {
-                        return (true);
-                      }
-      else            {
-                        return (false);
-                      }
+    return vowel.toLowercase().charAt(0)==a || vowel.toLowercase().charAt(0)==e || vowel.toLowercase().charAt(0)==i ||       vowel.toLowercase().charAt(0)==o || vowel.toLowercase().charAt(0)==u;
                  }
 ```
 
@@ -266,9 +257,9 @@ function vowel(a){
     goodDog: true,
     speak: function() {
       console.log("Woof!");
-  console.log(speak);
-  }
   
+  }
+ console.log(pet.speak());
   };
   ```
 
@@ -288,7 +279,7 @@ command line is a console which allows a user to manipulate things such as files
 ls lists all directories accessible at that moment in time
 
 3. What does the command `pwd` do?
-pwd shows you the file path leading up your current directory
+pwd shows you the file path leading up to your current directory
 
 4. What does the following command do: `cd my-cool-project`
 This command changes your directory to the "my-cool-project" folder
@@ -296,7 +287,7 @@ This command changes your directory to the "my-cool-project" folder
 ### Exercises
 
 1. Write the command to make a new directory called "my-cool-project".
-mk dir my-cool-project
+mkdir my-cool-project
 
 2. Write the command to create a file called "index.html".
 touch index.html
