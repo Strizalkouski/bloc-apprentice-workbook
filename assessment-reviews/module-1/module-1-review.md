@@ -220,14 +220,15 @@ The output would be "Hello Sarah !" "Goodbye Sarah !"
 8. Write a function `findLongestWord()` that takes an array of words and returns the length of the longest one.
 ```
 function findLongestWord(word){
-                          var longest == 0;
-                            for(i=0;i<word.length;i++)
-                            {
-                            if (word[i].length > longest)
-                              {
-                              longest == word;
-                              }
-                            }
+ var longest = 0;
+  for(var i=0;i<word.length;i++){
+    if (word[i].length > longest)
+       {
+        longest = word[i].length;
+       }
+      }
+   return longest;
+   }
 ```
 9. Define a function `sum()` that sums all the numbers in an array of numbers. For example, `sum([1,2,3,4])` should return 10.
 ```
@@ -244,8 +245,8 @@ var sum = 0;
 ```
 10. Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 ```
-function vowel(a){
-    return vowel.toLowercase().charAt(0)==a || vowel.toLowercase().charAt(0)==e || vowel.toLowercase().charAt(0)==i ||       vowel.toLowercase().charAt(0)==o || vowel.toLowercase().charAt(0)==u;
+function vowel(char){
+    return char.toLowercase().charAt(0)=="a" || char.toLowercase().charAt(0)=="e" || char.toLowercase().charAt(0)=="i" ||       char.toLowercase().charAt(0)=="o" || char.toLowercase().charAt(0)=="u";
                  }
 ```
 
@@ -258,9 +259,10 @@ function vowel(a){
     speak: function() {
       console.log("Woof!");
   
-  }
- console.log(pet.speak());
+    }
   };
+  pet.speak();
+  
   ```
 
 12. Using the same script as above, write the correct line to log the dog's name to the console.
