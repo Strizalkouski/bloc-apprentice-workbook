@@ -12,12 +12,18 @@
 
 ### Questions
 
-1. What is the box model?
+1. What is the box model?  
+The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
 2. What is the difference between block and inline elements?
+Basically, an inline element does not cause a line break (start on a new line) and does not take up the full width of a page, only the space bounded by its opening and closing tag. It is usually used within other HTML elements.  A block-level element always starts on a new line and takes up the full width of a page, from left to right. A block-level element can take up one line or multiple lines and has a line break before and after the element.
 3. What is responsive design?
+Responsive design ensures that your page will look good regardless of device or screen size.  This means hiding elements, resizing elements, or moving elements around based on screen sizes.
 4. Which selector is more specific, a tag selector or class selector?
+A class selector is more specific because you add a class to an existing tag.
 5. What does `box-sizing` do?
+The box-sizing property defines how the width and height of an element are calculated: should they include padding and borders, or not.
 6. What's the difference between `relative` and `absolute` positioning?
+Relative. This type of positioning is probably the most confusing and misused. What it really means is "relative to itself". If you set position: relative; on an element but no other positioning attributes (top, left, bottom or right), it will no effect on it's positioning at all, it will be exactly as it would be if you left it as position: static; But if you do give it some other positioning attribute, say, top: 10px;, it will shift its position 10 pixels down from where it would normally be.  Absolute. This is a very powerful type of positioning that allows you to literally place any page element exactly where you want it. You use the positioning attributes top, left, bottom. and right to set the location. Remember that these values will be relative to the next parent element with relative (or absolute) positioning. If there is no such parent, it will default all the way back up to the <html> element itself meaning it will be placed relatively to the page itself.
 
 ### Exercises
 
@@ -26,6 +32,9 @@
   ```html
   <a href="#" class="btn">Learn more</a>
   ```
+  .btn:hover {
+              color: blue;
+              }
 
 2. Write a CSS rule to give the `.container` a maximum width of `980px` when the browser window is wider than `1200px`:
 
@@ -34,6 +43,10 @@
     <h1>I'm a heading!</h1>
   </div>
   ```
+  @media (min-width: 1200px)
+  .container {
+             max-width: 980px;
+             }
 
 3. Which text would be red in the following example?
 
@@ -47,26 +60,29 @@
   <section>
     <p>First paragraph</p>
     <p>Second paragraph</p>
-    <p>Third paragraph</p>
+    <p>Third paragraph</p>- red
   </section>
   <section>
     <p>First paragraph</p>
     <p>Second paragraph</p>
-    <p>Third paragraph</p>
+    <p>Third paragraph</p> -red
   </section>
   ```
 
 4. Open this [JSBin](http://jsbin.com/qigiwuhepe/1/edit?html,css,output). Write a CSS rule using floats to make the HTML sample into a four column layout. Paste your udpated link below.
+http://jsbin.com/wegoyegisi/edit?html,css,output
 
 ## JavaScript
 
 ### Questions
 
 1. What is a callback?
+A callback is a function that is used inside of another function.  This function gets used as a parameter within said function and executes inside of that.
 
 ### Exercises
 
 1. Write a function `filterLongWords()` that takes an array of words and an integer `num` and returns the array of words that are longer than `num`.
+
 2. Write a function `charFreq()` that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like `charFreq("abbabcbdbabdbdbabababcbcbab")`.
 
 ## DOM Scripting
@@ -74,6 +90,7 @@
 ### Questions
 
 1. What does DOM stand for and what is it?
+Document Object Model and the DOM is used to access the Document and its Objects.
 
 ### Exercises
 
@@ -91,7 +108,9 @@
 ### Questions
 
 1. What is a JavaScript library and why do we use them?
+A Javascript library is a bunch of tools that we can use within Javascript to add other layers of functionality.  We need to state that we are using a library to let the program or webpage know that we will be utilizing tools from there.
 2. What is jQuery for?
+jQuery is used for Document Object Model manipulation.
 
 ### Exercises
 
