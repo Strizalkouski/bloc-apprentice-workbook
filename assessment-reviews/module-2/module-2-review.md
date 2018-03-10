@@ -129,14 +129,20 @@ jQuery is used for Document Object Model manipulation.
 ### Questions
 
 1. How is a framework different than a library?
+A library, such as jQuery, is a collection of prewritten code consisting of common tasks that simplify development. Our code is "in charge" and uses a library to retrieve specific functions from the collection.  A framework, like Angular, provides the basic structure of an application. The framework is "in charge" and our code fills in the details.
 2. What is a controller?
+Controllers contain the business logic that applies functions and values to scope.  It is a javascript object created to modularize the code and break it into specific functionality or jobs.
 3. What is a view?
+A view is what the user will see when a specific thing is happening.  There is a default view, and other views are called into place when actions occur.  Views make for a smooth webpage as it's not always a complete page reload, it's just the specific "view" reloading.
 4. What is a single page application?
+A single page application is a page that does not need to switch pages when events happen.  Instead, new views are populated and presented when the actions occur.
 5. What is a directive in Angular?
-
+A directive binds angular activity to the HTML.  For example ngRepeat will repeat the instances that are present.  ngClick indicates to do something when the HTML is clicked.
 ## Git
 
 ### Exercises
 
 1. Write a command to create a new branch called `bug-fix`.
+git checkout -b "bug-fix"
 2. If you're on the `master` branch, write a command to merge a branch called `bug-fix` into the `master` branch.
+git merge "bug-fix"
